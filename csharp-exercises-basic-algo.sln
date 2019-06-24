@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-exercises-basic-algo", "csharp-exercises-linq-basic-algo\csharp-exercises-basic-algo.csproj", "{A6FC0322-DFEE-4B67-8398-4592E30E2268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6FC0322-DFEE-4B67-8398-4592E30E2268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6FC0322-DFEE-4B67-8398-4592E30E2268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6FC0322-DFEE-4B67-8398-4592E30E2268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6FC0322-DFEE-4B67-8398-4592E30E2268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D00BC12-6DF4-4750-BEA7-65594DD297C4}
+	EndGlobalSection
+EndGlobal
