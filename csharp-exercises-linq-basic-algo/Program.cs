@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace csharp_exercices_basic_algo
@@ -141,30 +142,519 @@ namespace csharp_exercices_basic_algo
                 case 28:
                     Module_28();
                     break;
+                case 29:
+                    Module_29();
+                    break;
+                case 30:
+                    Module_30();
+                    break;
+                case 31:
+                    Module_31();
+                    break;
+                case 32:
+                    Module_32();
+                    break;
+                case 33:
+                    Module_33();
+                    break;
+                case 34:
+                    Module_34();
+                    break;
+                case 35:
+                    Module_35();
+                    break;
+                case 36:
+                    Module_36();
+                    break;
+                case 37:
+                    Module_37();
+                    break;
+                case 38:
+                    Module_38();
+                    break;
+                case 39:
+                    Module_39();
+                    break;
+                case 40:
+                    Module_40();
+                    break;
+                case 41:
+                    Module_41();
+                    break;
+                case 42:
+                    Module_42();
+                    break;
+                case 43:
+                    Module_43();
+                    break;
+                case 44:
+                    Module_44();
+                    break;
+                case 45:
+                    Module_45();
+                    break;
+                case 46:
+                    Module_46();
+                    break;
+                case 47:
+                    Module_47();
+                    break;
+                case 48:
+                    Module_48();
+                    break;
+                case 49:
+                    Module_49();
+                    break;
+                case 50:
+                    Module_50();
+                    break;
                 default:
                     Console.WriteLine("No module: " + number);
                     Main(null);
                     break;
             }
         }
+        static void Module_50()
+        {
+            //Write a C# Sharp program to check if two or more non-negative given integers have the same rightmost digit.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int c = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10)
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_49()
+        {
+            //Write a C# Sharp program to check if three given numbers are in strict increasing order, 
+            //such as 4 7 15, or 45, 56, 67, but not 4 ,5, 8 or 6, 6, 8.
+            //However,if a fourth parameter is true, equality is allowed, such as 6, 6, 8 or 7, 7, 7.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int c = Int32.Parse(Console.ReadLine());
+
+            bool result = false;
+            bool equality = false;
+
+            Console.WriteLine("Is equality allowed (y/n) ?: ");
+            if (Console.ReadLine().ToUpper() == "Y")
+                equality = true;
+
+            if(equality == false && (a < b && b < c))
+            {
+                result = true;
+            }
+            if (equality == true && (a <= b && b <= c))
+            {
+                result = true;
+            }
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_48()
+        {
+            //Write a C# Sharp program to check if y is greater than x, and z is greater than y from three given integers x,y,z. 
+            Console.WriteLine("Enter an integer X: ");
+            int x = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer Y: ");
+            int y = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer Z: ");
+            int z = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (y > x && z > y)
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_47()
+        {
+            //Write a C# Sharp program to check if it is possible to add two integers to get the third integer from three given integers.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int c = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if(a + b == c ||
+               a + c == b ||
+               b + c == a
+               )
+            {
+                result = true;
+            }
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_46()
+        {
+            //Write a C# Sharp program to check whether a given string starts with "F" or ends with "B". 
+            //If the string starts with "F" return "Fizz" and return "Buzz" if it ends with "B" If the 
+            //string starts with "F" and ends with "B" return "FizzBuzz". In other cases return the original string.
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine().ToUpper();
+            StringBuilder sb = new StringBuilder();
+
+            if (input.StartsWith("F"))
+                sb.Append("Fizz");
+            if (input.EndsWith("B"))
+                sb.Append("Buzz");
+            if (sb.Length > 0)
+                input = sb.ToString();
+
+            Console.WriteLine("Result: " + input);
+            Restart();
+        }
+        static void Module_45()
+        {
+            //Write a C# Sharp program to compute the sum of the two given integers. 
+            //If one of the given integer value is in the range 10..20 inclusive return 18.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            int sum = a + b;
+
+            if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20))
+                sum = 18;
+
+            Console.WriteLine("Result: " + sum);
+            Restart();
+        }
+        static void Module_44()
+        {
+            //Write a C# Sharp program to check if a given number is within 2 of a multiple of 10
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (a % 10 <= 2 || a % 10 >= 8)
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_43()
+        {
+            //Write a C# Sharp program to check if a given non-negative given number is a multiple of 3 or 7, but not both.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (a % 3 == 0 || a % 7 == 0)
+                result = true;
+            if (a % 3 == 0 && a % 7 == 0)
+                result = false;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_42()
+        {
+            //Write a C# Sharp program to test if a given non-negative number is a multiple of 13 or it is one more than a multiple of 13.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (a % 13 == 0 || a % 13 == 1)
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_41()
+        {
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (a == 5 || b == 5 || a + b == 5 || Math.Abs(a - b) == 5)
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_40()
+        {
+            //Write a C# Sharp program to compute the sum of the two given integers. 
+            //If the sum is in the range 10..20 inclusive return 30.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            int sum = a + b;
+
+            if (sum >= 10 && sum <= 20)
+                sum = 30;
+
+            Console.WriteLine("Result: " + sum);
+            Restart();
+        }
+        static void Module_39()
+        {
+            //Write a C# Sharp program to check if a triple is presents in an array of integers or not. 4
+            //If a value appears three times in a row in an array it is called a triple.
+            Console.WriteLine("Enter a string of integers: ");
+            string input = Console.ReadLine();
+            List<int> intList = new List<int>();
+            int[] intArray;
+            bool result = false;
+
+            foreach (char c in input)
+            {
+                intList.Add(Int32.Parse(c.ToString()));
+            }
+            intArray = intList.ToArray();
+
+            for (int i = 0; i < intArray.Length - 2; i++)
+            {
+                int value = intArray[i];
+                if (intArray[i + 1] == value && intArray[i + 2] == value)
+                    result = true;
+            }
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_38()
+        {
+            //Write a C# Sharp program to count the number of two 5's are next to each other in an array of integers. 
+            //Also count the situation where the second 5 is actually a 6.
+            Console.WriteLine("Enter a string on integers: ");
+            string input = Console.ReadLine();
+            List<int> intList = new List<int>();
+            int[] intArray;
+            int count = 0;
+
+            foreach (char c in input)
+            {
+                intList.Add(Int32.Parse(c.ToString()));
+            }
+            intArray = intList.ToArray();
+
+            for (int i = 0; i < intArray.Length - 1; i++)
+            {
+                if (intArray[i].Equals(5) && (intArray[i + 1].Equals(5) || intArray[i + 1].Equals(6)))
+                    count++;
+            }
+            Console.WriteLine("Result: " + count);
+            Restart();
+        }
+        static void Module_37()
+        {
+            //Write a C# Sharp program to create a new string of the characters at indexes 0,1, 4,5, 8,9 ... from a given string.
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            string result = string.Empty;
+            //0 < x -> 1 loop
+            //5 <= x -> 2 loop
+            //9 <= x -> 3 loop
+            for (int i = 0; i < input.Length; i += 4)
+            {
+                int c = i + 2;
+                int n = 0;
+
+                //n = 1 if c > input.Length
+                //n = 2 if c < input.Length
+                n += c > input.Length ? 1 : 2;
+                //Console.WriteLine($"input.Length = {input.Length} c = {c} n = {n}");
+                result += input.Substring(i, n);
+            }
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_36()
+        {
+            //Write a C# Sharp program to create a new string from a give string 
+            //where a specified character have been removed 
+            //except starting and ending position of the given string.
+            Console.WriteLine("Enter a string of letters: ");
+            string input = Console.ReadLine();
+            Console.WriteLine("Enter a char: ");
+            string c = Console.ReadLine();
+
+            for (int i = input.Length - 2; i > 0; i--)
+            {
+                //Console.WriteLine(i + " " + input[i]);
+                if(input[i] == c[0])
+                {
+                    input = input.Remove(i, 1);
+                }
+            }
+
+            Console.WriteLine(input);
+            Restart();
+        }
+        static void Module_35()
+        {
+            //Write a C# Sharp program to compare two given strings 
+            //and return the number of the positions where they contain the same length 2 substring.
+            Console.WriteLine("Mata in en string: ");
+            string stringA = Console.ReadLine();
+            Console.WriteLine("Mata in en string: ");
+            string stringB = Console.ReadLine();
+
+            for (int a = 0; a < stringA.Length; a++)
+            {
+                if(a + 2 > stringA.Length)
+                {
+                    Console.WriteLine("Continue A");
+                    continue;
+                }
+                string sa = stringA.Substring(a, 2);
+                for (int b = 0; b < stringB.Length; b++)
+                {
+                    if (a + 2 > stringA.Length)
+                    {
+                        Console.WriteLine("Continue B");
+                        continue;
+                    }
+
+                    string sb = stringB.Substring(b, 2);
+                    Console.WriteLine(sa + "_" + sb);
+                }
+                Console.WriteLine();
+            }
+
+            Restart();
+        }
+        static void Module_34()
+        {
+            //Write a C# Sharp program to check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere.
+            Console.WriteLine("Enter a string of integers: ");
+            string input = Console.ReadLine();
+            bool value = false;
+            int[] intArray = new int[input.Length];
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                intArray[i] = Int32.Parse(input[i].ToString());
+            }
+
+            for (int i = 0; i < intArray.Length - 2; i++)
+            {
+                if (intArray[i] == 1 && intArray[i + 1] == 2 && intArray[i + 2] == 3)
+                    value = true;
+            }
+            Console.WriteLine("Result: " + value);
+            Restart();
+        }
+        static void Module_33()
+        {
+            //Write a C# Sharp program to check if one of the first 4 elements in an array of integers is equal to a given element.
+            Console.WriteLine("Enter a string of integers: ");
+            string input = Console.ReadLine();
+            Console.WriteLine("Enter a integer: ");
+            int choice = Int32.Parse(Console.ReadLine());
+            bool value = false;
+
+            int[] intArray = new int[4];
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                intArray[i] = Int32.Parse(input[i].ToString());
+            }
+            if (intArray.Contains(choice) == true)
+                value = true;
+
+            Console.WriteLine("Result: " + value);
+            Restart();
+        }
+        static void Module_32()
+        {
+            //Write a C# Sharp program to check a specified number is present in a given array of integers.
+            Console.WriteLine("Enter a string of integers: ");
+            string input = Console.ReadLine();
+            Console.WriteLine("Enter a integer: ");
+            int choice = Int32.Parse(Console.ReadLine());
+            bool value = false;
+
+            int[] intArray = new int[input.Length];
+            for (int i = 0; i < input.Length; i++)
+            {
+                intArray[i] = Int32.Parse(input[i].ToString());
+            }
+            if (intArray.Contains(choice) == true)
+                value = true;
+
+            Console.WriteLine("Result: " + value);
+            Restart();
+        }
+        static void Module_31()
+        {
+            //Write a C# Sharp program to count a substring of length 2 appears in a given string and also as the last 2 characters of the string. 
+            //Do not count the end substring.
+            //abcdeab -> ab---ab -> true
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            bool result = false;
+            var last_two_char = input.Substring(input.Length - 2);
+
+            for (int i = 0; i < input.Length - 2; i++)
+            {
+                if (input.Substring(i, 2).Equals(last_two_char))
+                    result = true;
+            }
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_30()
+        {
+            //Write a C# Sharp program to create a new string made of every other character starting with the first from a given string.
+            //Input: abcd
+            //Output: a + ab + abc + abcd = aababcabcd
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            string result = string.Empty;
+
+            for (var i = 0; i < input.Length; i++)
+            {
+                result += input.Substring(0, i + 1);
+            }
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_29()
+        {
+            //Write a C# Sharp program to create a new string made of every other character starting with the first from a given string.
+            //Lägg till varannan bokstav i input till en ny string
+            Console.WriteLine("Mata in en string: ");
+            string input = Console.ReadLine();
+            string result = string.Empty;
+            for (var i = 0; i < input.Length; i++)
+            {
+                if (i % 2 == 0) result += input[i];
+            }
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
         static void Module_28()
         {
             //Write a C# Sharp program to check if the first appearance of "a" in a given string is immediately followed by another "a".
             Console.WriteLine("Mata in en string: ");
             string input = Console.ReadLine();
+            //int counter = 0;
 
             for (int i = 0; i < input.Length - 1; i++)
             {
-                //if (input[i + 1] == null)
-                //    break;
-
-                //char a = char.ToLower(input[i]);
-                //char b = char.ToLower(input[i + 1]);
-
-                //if (a.Equals('a') && )
-                //{
-
-                //}
+                //if (input[i].Equals('a'))
+                //    counter++;
+                if (input.Substring(i, 2).Equals("aa")/* && counter < 2*/)
+                    Console.WriteLine($"aa at {i} and {i + 1}");
             }
 
 
