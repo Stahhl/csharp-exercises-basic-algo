@@ -5,6 +5,7 @@ using System.Text;
 
 namespace csharp_exercices_basic_algo
 {
+    //https://www.w3resource.com/csharp-exercises/basic-algo/index.php
     class Program
     {
         static void Main(string[] args)
@@ -208,12 +209,369 @@ namespace csharp_exercices_basic_algo
                 case 50:
                     Module_50();
                     break;
+                case 51:
+                    Module_51();
+                    break;
+                case 52:
+                    Module_52();
+                    break;
+                case 53:
+                    Module_53();
+                    break;
+                case 54:
+                    Module_54();
+                    break;
+                case 55:
+                    Module_55();
+                    break;
+                case 56:
+                    Module_56();
+                    break;
+                case 57:
+                    Module_57();
+                    break;
+                case 58:
+                    Module_58();
+                    break;
+                case 59:
+                    Module_59();
+                    break;
+                case 60:
+                    Module_60();
+                    break;
+                case 61:
+                    Module_61();
+                    break;
+                case 62:
+                    Module_62();
+                    break;
+                case 63:
+                    Module_63();
+                    break;
+                case 64:
+                    Module_64();
+                    break;
+                case 65:
+                    Module_65();
+                    break;
+                case 66:
+                    Module_66();
+                    break;
+                case 67:
+                    Module_67();
+                    break;
+                case 68:
+                    Module_68();
+                    break;
+                case 69:
+                    Module_69();
+                    break;
+                case 70:
+                    Module_70();
+                    break;
                 default:
                     Console.WriteLine("No module: " + number);
                     Main(null);
                     break;
             }
         }
+        //70 - commit - push
+        static void Module_70()
+        {
+            //Write a C# Sharp program to create a new string without the first and last character of a given string of any length.
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            string result = input.Length < 2 ? string.Empty : input.Substring(1, input.Length - 2);
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_69() //Nice
+        {
+            //Write a C# Sharp program to move the last two characters to the start of a given string of length at least two.
+            Console.WriteLine("Enter a string at least two characters: ");
+            string input = Console.ReadLine();
+            string result = input.Substring(input.Length - 2) + input.Remove(input.Length - 2);
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_68()
+        {
+            //Write a C# Sharp program to move the first two characters to the end of a given string of length at least two.
+            Console.WriteLine("Enter a string at least two characters: ");
+            string input = Console.ReadLine();
+            string result = input.Remove(0, 2) + input.Substring(0, 2);
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_67()
+        {
+            //Write a C# Sharp program to concat two given string of length atleast 1, after removing their first character. 
+            Console.WriteLine("Enter a string: ");
+            string input1 = Console.ReadLine();
+            Console.WriteLine("Enter a string: ");
+            string input2 = Console.ReadLine();
+
+            string result = input1.Substring(1) + input2.Substring(1);
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_66()
+        {
+            //Write a C# Sharp program to create a new string from two given string one is shorter and another is longer. 
+            //The format of the new string will be long string + short string + long string.
+            Console.WriteLine("Enter a string: ");
+            string input1 = Console.ReadLine();
+            Console.WriteLine("Enter a string: ");
+            string input2 = Console.ReadLine();
+
+            string longest = input1.Length > input2.Length ? input1 : input2;
+            string shortest = input1.Length < input2.Length ? input1 : input2;
+
+            string result = longest + shortest + longest;
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_65()
+        {
+            //Write a C# Sharp program to create a new string without the first and last character of a given string of length atleast two.
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            input = input.Remove(0, 1);
+            input = input.Remove(input.Length - 1, 1);
+            Console.WriteLine("Result: " + input);
+            Restart();
+        }
+        static void Module_64()
+        {
+            //Write a C# Sharp program to create a new string of the first half of a given string of even length.
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            string result = input.Substring(0, (input.Length / 2));
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_63()
+        {
+            //Write a C# Sharp program to create a new string using first two characters of a given string. 
+            //If the string length is less than 2 then return the original string..
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            string result = string.Empty;
+            if (input.Length < 2)
+                result = input;
+            else
+                result = input.Substring(0, 2);
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_62()
+        {
+            //Write a C# Sharp program to create a new string using three copies of the last two character of a given string of length atleast two.
+            Console.WriteLine("Enter a string atleast two characters: ");
+            string input = Console.ReadLine();
+            string sub = input.Substring(input.Length - 2, 2);
+            string result = sub + sub + sub;
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_61()
+        {
+            //Write a C# Sharp program to insert a given string into middle of the another given string of length 4.
+            Console.WriteLine("Enter a string: ");
+            string input = Console.ReadLine();
+            input = input.Insert((input.Length / 2), " hi ");
+
+            Console.WriteLine("Result: " + input);
+
+            Restart();
+        }
+        static void Module_60()
+        {
+            //Write a C# Sharp program to create a new string using two given strings s1, s2, the format of the new string will be s1s2s2s1.
+            Console.WriteLine("Enter a string: ");
+            string s1 = Console.ReadLine();
+            Console.WriteLine("Enter a string: ");
+            string s2 = Console.ReadLine();
+
+            Console.WriteLine("Result: " + s1 + s2 + s2 + s1);
+            Restart();
+        }
+        static void Module_59()
+        {
+            //Write a C# Sharp program to check three given integers (small, medium and large) 
+            //and return true if the difference between small and medium and the difference between medium and large is same.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int c = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (Math.Abs(a - b) == Math.Abs(b - c))
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_58()
+        {
+            //Write a C# Sharp program to check two given integers 
+            //and return the value whichever value is nearest to 13 without going over. 
+            //Return 0 if both numbers go over.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            int result = 0;
+
+            if (a <= 13 && b > 13)
+                result = a;
+            else if (b <= 13 && a > 13)
+                result = b;
+            else
+                result = a > b ? a : b;
+
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_57()
+        {
+            //Write a C# Sharp program to compute the sum of the three given integers. 
+            //However, if any of the values is in the range 10..20 inclusive then that value counts as 0, except 13 and 17.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            a = (a < 13 && a > 9) || (a > 17 && a < 21) ? a : 0;
+            Console.WriteLine("Enter an integer");
+            int b = Int32.Parse(Console.ReadLine());
+            b = (b < 13 && b > 9) || (b > 17 && b < 21) ? b : 0;
+            Console.WriteLine("Enter an integer");
+            int c = Int32.Parse(Console.ReadLine());
+            a = (c < 13 && c > 9) || (c > 17 && c < 21) ? c : 0;
+            int sum = a + b + c;
+
+            Console.WriteLine("Result: " + sum);
+            Restart();
+        }
+        static void Module_56()
+        {
+            //Write a C# Sharp program to compute the sum of the three integers. 
+            //If one of the values is 13 then do not count it and its right towards the sum. 
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            a = a != 13 ? a : 0;
+            Console.WriteLine("Enter an integer");
+            int b = Int32.Parse(Console.ReadLine());
+            b = b != 13 ? b : 0;
+            Console.WriteLine("Enter an integer");
+            int c = Int32.Parse(Console.ReadLine());
+            c = c != 13 ? c : 0;
+            int sum = a + b + c;
+
+            Console.WriteLine("Result: " + sum);
+            Restart();
+        }
+        static void Module_55()
+        {
+            //Write a C# Sharp program to compute the sum of three given integers. 
+            //If the two values are same return the third value.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            a = a != 13 ? a : 0;
+            Console.WriteLine("Enter an integer");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer");
+            int c = Int32.Parse(Console.ReadLine());
+            int sum = a + b + c;
+
+            if (a == b)
+                sum = c;
+            if (a == c)
+                sum = b;
+            if (b == c)
+                sum = a;
+
+            Console.WriteLine("Result: " + sum);
+            Restart();
+        }
+        static void Module_54()
+        {
+            //Write a C# Sharp program to compute the sum of two given non-negative 
+            //integers x and y as long as the sum has the same number of digits as x. 
+            //If the sum has more digits than x then return x without y.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+
+            //if -> a
+            //else -> a + b
+            int result = (a + b).ToString().Length > a.ToString().Length ? a : a + b;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_53()
+        {
+            //Write a C# Sharp program to check two given integers, each in the range 10..99. 
+            //Return true if a digit appears in both numbers, such as the 3 in 13 and 33.
+            Console.WriteLine("Enter an integer in the range 10-99: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer in the range 10-99: ");
+            int b = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if (a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10)
+                result = true;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_52()
+        {
+            //Write a C# Sharp program to find the larger from two given integers. 
+            //However if the two integers have the same remainder when divided by 7, then the return the smaller integer. 
+            //If the two integers are the same, return 0.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            int result = 0;
+
+            if ((a % 7 == b % 7 && a < b) || a > b)
+                result = a;
+            else
+                result = b;
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        static void Module_51()
+        {
+            //Write a C# Sharp program to check three given integers 
+            //and return true if one of them is 20 or more less than one of the others.
+            Console.WriteLine("Enter an integer: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter an integer: ");
+            int c = Int32.Parse(Console.ReadLine());
+            bool result = false;
+
+            if(
+                Math.Abs(a - b) >= 20 ||
+                Math.Abs(a - c) >= 20 ||
+                Math.Abs(b - c) >= 20)
+            {
+                result = true;
+            }
+
+            Console.WriteLine("Result: " + result);
+            Restart();
+        }
+        //50 - commit - push
         static void Module_50()
         {
             //Write a C# Sharp program to check if two or more non-negative given integers have the same rightmost digit.
